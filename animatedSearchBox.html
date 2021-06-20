@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated Search Box using HTML, CSS and JS</title>
+    <link rel="stylesheet" href="animatedSearchBox.css" />
+
+    <script
+      src="https://kit.fontawesome.com/83fc83295f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="custom-container">
+      <div class="custom-nav">
+        <div><a hre="">Home</a></div>
+        <div><a hre="">About</a></div>
+        <div><a hre="">Services</a></div>
+        <div><a hre="">Contact</a></div>
+
+        <div class="search-icon">
+          <i class="fas fa-search" onClick="handleSearch()"></i>
+        </div>
+
+        <div id="header-search-box" class="header-search-box">
+          <input
+            type="text"
+            class="search_input"
+            id="search_input"
+            autofocus
+            placeholder="Search Page/People/Job/Sale/ post"
+          />
+          <i class="fas fa-times" onClick="handleSearch()"></i>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const element1 = document.getElementById("header-search-box");
+      element1.classList.add("header-search-box-hide");
+
+      const handleSearch = () => {
+        console.log("btn clicked");
+        const element = document.getElementById("header-search-box");
+        const search_input = document.getElementById("search_input");
+        search_input.value = "";
+        element.classList.toggle("header-search-box-hide");
+      };
+    </script>
+  </body>
+</html>
